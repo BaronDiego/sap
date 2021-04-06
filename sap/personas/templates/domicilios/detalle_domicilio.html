@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    Detalle domicilio
+{% endblock titulo %}
+
+{% block contenido %}
+<div class="row">
+    <div class="col">
+        
+    <div>
+        <h1>Calle: {{domicilio.calle}}</h1>
+        <h2>Número calle: {{domicilio.no_calle}}</h2>
+        <h3>Pais: {{domicilio.pais}}</h3>
+        <a href="{% url 'domicilios' %}">Volver</a>
+    </div>
+    </div>
+</div>
+    
+{% endblock contenido %}
+    
+    
+

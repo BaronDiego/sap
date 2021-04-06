@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block contenido %} 
+<div>
+    <div>
+        <h3>Número de domicilios: {{no_domicilios}}</h3>
+    </div>
+    <a href="{% url 'nuevo_domicilio' %}" class="btn btn-info">Crear Domicilio</a>
+    
+        <ul>
+            {% for domicilio in domicilios %}
+                <li>{{domicilio.calle}} - <a href="{% url 'detalle_domicilio' domicilio.id %}">Ver más</a> - 
+                    <a href="{% url 'editar_domicilio' domicilio.id %}" class="text-success">Editar</a> - 
+                    <a href="{% url 'eliminar_domicilio' domicilio.id %}" class="text-danger">Eliminar</a>
+                </li>
+            {% endfor %}
+        </ul>
+        <hr>
+       <a href="{% url 'index' %}" class="btn btn-warning">Personas</a>
+  
+</div>
+{% endblock contenido %}
+    
+    

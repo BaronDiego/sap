@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block titulo %}
+    Editar Domicilio
+{% endblock titulo %}
+    
+{% block contenido %}
+<div class="row">
+    <div class="col-sm-12 col-md-6 mx-auto">
+        <div class="card border-info">
+            <div class="card-header bg-info text-center text-white">
+                <h2>Agregar Domicilio</h2>
+            </div>
+            <div class="card-body">
+                <form action="" method="post" class="uniForm">
+                    {% csrf_token %}
+                        <div class="form-group">
+                            {{formaDomicilio|crispy}}
+                        </div>
+                    <button type="submit" class="btn btn-primary btn-block">Actualizar Domicilio</button>
+                </form>
+            </div>
+            <div class="card-footer text-center">
+                <a href="{% url 'domicilios' %}">Volver</a>
+            </div>
+        </div>
+       
+    </div>
+</div>
+    
+{% endblock contenido %}
+    

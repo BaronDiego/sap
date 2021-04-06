@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    Detalle persona
+{% endblock titulo %}
+
+{% block contenido %}
+<div class="row">
+    <div class="col">
+        
+    <div>
+        <h1>Nombre: {{persona.nombre}} {{persona.apellido}}</h1>
+        <h2>E-mail: {{persona.email}}</h2>
+        <h3>Domicilio: {{persona.domicilio}}</h3>
+        <a href="{% url 'index' %}">Volver</a>
+    </div>
+    </div>
+</div>
+    
+{% endblock contenido %}
+    
+    
+
